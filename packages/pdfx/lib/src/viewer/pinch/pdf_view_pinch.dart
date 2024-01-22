@@ -81,7 +81,7 @@ class _PdfViewPinchState extends State<PdfViewPinch>
   bool _firstControllerAttach = true;
   bool _forceUpdatePagePreviews = true;
 
-  double get _padding => widget.padding;;
+  double get _padding => widget.padding;
 
   @override
   void initState() {
