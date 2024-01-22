@@ -245,7 +245,7 @@ class _PdfViewPinchState extends State<PdfViewPinch>
         page.rect = Rect.fromLTWH(_padding, top, w, h);
         top += h + _padding;
       }
-      _docSize = Size(viewSize.width, math.max(top, viewSize.height));
+      _docSize = Size(viewSize.width, max(top, viewSize.height));
     }
   }
 
