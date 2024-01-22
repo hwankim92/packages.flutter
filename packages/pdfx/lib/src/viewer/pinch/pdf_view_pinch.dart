@@ -19,7 +19,6 @@ export 'package:photo_view/photo_view_gallery.dart';
 part 'pdf_controller_pinch.dart';
 part 'pdf_view_pinch_builders.dart';
 
-/// 
 /// Widget for viewing PDF documents with pinch to zoom feature
 class PdfViewPinch extends StatefulWidget {
   const PdfViewPinch({
@@ -82,7 +81,7 @@ class _PdfViewPinchState extends State<PdfViewPinch>
   bool _firstControllerAttach = true;
   bool _forceUpdatePagePreviews = true;
 
-  double get _padding => 50;
+  double get _padding => widget.padding;;
 
   @override
   void initState() {
@@ -246,7 +245,7 @@ class _PdfViewPinchState extends State<PdfViewPinch>
         page.rect = Rect.fromLTWH(_padding, top, w, h);
         top += h + _padding;
       }
-      _docSize = Size(viewSize.width, top);
+      _docSize = Size(viewSize.width, math.max(top, viewSize.height));
     }
   }
 
